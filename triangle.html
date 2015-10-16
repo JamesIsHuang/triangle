@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>created by huangwei</title>
+	<style type="text/css">
+		#triangle1{
+			width: 0;
+		    height: 0;
+		    border-top: 50px solid transparent;
+		    border-left: 100px solid red;
+		    border-bottom: 50px solid transparent;
+		   /* border-right: 100px solid red;*/
+	    }
+	    
+	</style>
+	
+</head>
+<body>
+		<div id="triangle1"></div>
+		<canvas id="triangle" height="100" width="100">Triangle</canvas>
+
+
+		<script type="text/javascript">
+			var canvas = document.getElementById('triangle');
+			var context = canvas.getContext('2d');
+
+			context.beginPath();
+			context.moveTo(0, 0);
+			context.lineTo(100, 0);
+			context.lineTo(50, 100);
+
+			context.closePath();
+
+			context.fillStyle = "red";
+			context.fill();
+
+		</script>
+</body>
+</html>
